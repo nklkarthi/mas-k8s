@@ -6,6 +6,8 @@ resource "kubernetes_deployment" "nginx" {
     }
   }
 
+  depends_on = [ aws_eks_cluster.demo, aws_iam_role.demo ]
+
   spec {
     replicas = 2
     selector {
