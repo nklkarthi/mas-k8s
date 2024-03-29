@@ -10,7 +10,7 @@ data "terraform_remote_state" "eks" {
   }
 }
 
-data "aws_eks_cluster" "cluster" {
+data "aws_eks_cluster" "demo" {
   name = data.terraform_remote_state.eks.outputs.cluster_name
 }
 
